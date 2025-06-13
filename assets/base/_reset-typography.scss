@@ -44,4 +44,40 @@ p{
 /**
 **************** Mobile **************************
 **/
-//@media (max-width: 1090px) {}
+@media (max-width: 769px) {
+
+    h1{
+    @include text($primary-color,$secondary-font,2rem,center,uppercase);
+}
+h2{
+    @include text($primary-color,$secondary-font,1.5rem,center,none);
+}
+h3{
+    @include text($primary-color,$terciary-font,1.5rem);
+}
+h4{
+    @include text($primary-color,$terciary-font,1.5rem);
+}
+h5{
+    @include text($primary-color,$terciary-font,1rem);
+}
+.heavy{
+    @include text($primary-color,$secondary-font,0.7rem);
+    margin:calc($y-gap-s * (2/3)) 0;
+}
+p{
+    @include text;
+    margin:0.5rem 0;
+    margin:calc($y-gap-s / 3) 0;
+    font-size:0.7rem;
+}
+
+.anotation{
+    @include text($text-color,$primary-font,0.5rem);
+    font-style: italic;
+    a{
+        @include text($text-color,$secondary-font,0.5rem);
+    }
+}
+    
+}

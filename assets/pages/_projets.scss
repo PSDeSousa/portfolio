@@ -111,11 +111,11 @@
     }
     .project-grid{
         .l-cell{
-            min-width : calc(26rem - $y-gap-s);
+            min-width : calc(18rem - $y-gap-s);
             height : calc(18rem - $y-gap-s);
         }
         .cell{
-            min-width : calc(26rem - $y-gap-s);
+            min-width : calc(18rem - $y-gap-s);
             height : calc( 18rem - $y-gap-s);
         }
     }

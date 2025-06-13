@@ -201,4 +201,22 @@
         }
 
 }
+
+.presentation{
+    .container-fluid{
+        background-color:$secondary-color;
+        article{
+            @include flex(row, space-between, center);
+            gap:$x-gap-l;
+            flex-wrap: wrap;
+            .cell{
+                //margin:auto;
+                img{
+                    width : 10rem;
+                }
+            }
+        }
+    }
+}
+
 }

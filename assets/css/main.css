@@ -100,6 +100,85 @@ p {
 /**
 **************** Mobile **************************
 **/
+@media (max-width: 769px) {
+  h1 {
+    color: #FFFFFF;
+    font-family: "Inter Bold", sans-serif;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h2 {
+    color: #FFFFFF;
+    font-family: "Inter Bold", sans-serif;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    text-transform: none;
+  }
+  h3 {
+    color: #FFFFFF;
+    font-family: "Inter Medium", sans-serif;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+  }
+  h4 {
+    color: #FFFFFF;
+    font-family: "Inter Medium", sans-serif;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+  }
+  h5 {
+    color: #FFFFFF;
+    font-family: "Inter Medium", sans-serif;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+  }
+  .heavy {
+    color: #FFFFFF;
+    font-family: "Inter Bold", sans-serif;
+    font-size: 0.7rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+    margin: 1rem 0;
+  }
+  p {
+    color: #FFFFFF;
+    font-family: "Inter Regular", sans-serif;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+    margin: 0.5rem 0;
+    margin: 0.5rem 0;
+    font-size: 0.7rem;
+  }
+  .anotation {
+    color: #343553;
+    font-family: "Inter Regular", sans-serif;
+    font-size: 0.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+    font-style: italic;
+  }
+  .anotation a {
+    color: #343553;
+    font-family: "Inter Bold", sans-serif;
+    font-size: 0.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+  }
+}
 .container-fluid {
   width: 100%;
   display: flex;
@@ -1298,6 +1377,21 @@ footer .row .column:first-child {
     flex-wrap: wrap;
     gap: 2.5rem;
   }
+  .presentation .container-fluid {
+    background-color: #000000;
+  }
+  .presentation .container-fluid article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    flex-wrap: wrap;
+  }
+  .presentation .container-fluid article .cell img {
+    width: 10rem;
+  }
 }
 .projets {
   background-color: #326D6C;
@@ -1411,11 +1505,11 @@ footer .row .column:first-child {
     margin: auto;
   }
   .projets .project-grid .l-cell {
-    min-width: 24.5rem;
+    min-width: 16.5rem;
     height: 16.5rem;
   }
   .projets .project-grid .cell {
-    min-width: 24.5rem;
+    min-width: 16.5rem;
     height: 16.5rem;
   }
 }
