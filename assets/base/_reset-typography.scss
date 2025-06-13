@@ -38,6 +38,9 @@ p{
         @include text($text-color,$secondary-font,0.75rem);
     }
 }
+.contrast{
+    background-color : $background-transparent-dark;
+}
 /**
 **************** Mobile **************************
 **/
