@@ -31,7 +31,13 @@ p{
     margin-top: $x-gap-s;
     text-align: right;
 }
-
+.anotation{
+    @include text($text-color,$primary-font,0.75rem);
+    font-style: italic;
+    a{
+        @include text($text-color,$secondary-font,0.75rem);
+    }
+}
 /**
 **************** Mobile **************************
 **/

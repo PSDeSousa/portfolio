@@ -16,6 +16,7 @@ Bienvenue dans le projet **Portfolio**, une site web permettant :
 - JavaScript Vanilla
 - Git / GitHub
 - GSAP
+- FORMSPREE
 
 ## 📂 Structure du projet
 

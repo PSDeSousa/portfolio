@@ -75,6 +75,24 @@ p {
   text-align: right;
 }
 
+.anotation {
+  color: #343553;
+  font-family: "Inter Regular", sans-serif;
+  font-size: 0.75rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  text-transform: none;
+  font-style: italic;
+}
+.anotation a {
+  color: #343553;
+  font-family: "Inter Bold", sans-serif;
+  font-size: 0.75rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  text-transform: none;
+}
+
 /**
 **************** Mobile **************************
 **/
