@@ -37,7 +37,7 @@ projet-mcdo/
 1. Clone le dépôt :
    
 bash
-   git clone https://github.com/xxxx
+   git clone https://github.com/PSDeSousa/portfolio.git
    
 2. Ouvre le fichier `index.html` dans ton navigateur.
 
