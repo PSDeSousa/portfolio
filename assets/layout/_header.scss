@@ -24,7 +24,7 @@ header{
         }
         .navbar{
             @include flex(row,space-between, center);
-            gap:$x-gap-m;
+            gap:$x-gap-s;
         }
         .primary-nav{
             @include flex(row,start, center);

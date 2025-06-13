@@ -177,7 +177,7 @@ header .desktop-nav .navbar {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 header .desktop-nav .primary-nav {
   display: flex;
@@ -420,12 +420,15 @@ footer .row .column:first-child {
 }
 .hero-banner .container-fluid .title {
   position: absolute;
-  top: 33%;
+  top: 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.hero-banner .container-fluid .title h2 {
+  margin-top: 0;
 }
 
 .hero-banner-top .container-fluid {

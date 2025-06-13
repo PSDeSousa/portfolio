@@ -17,8 +17,11 @@
         }
         .title{
             position : absolute;
-            top : 33%;
+            top : 35%;
             @include flex(column, center, center);
+            h2{
+                margin-top:0;
+            }
         }
     }
     
