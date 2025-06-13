@@ -9,17 +9,4 @@
     .container{
         margin:auto;
     }
-    .project-card{
-        position : relative;
-        width : 30rem;
-        height : 22rem;
-        //overflow: hidden;
-        margin-left: calc($x-gap-s / 2);
-        margin-right: calc($x-gap-s / 2);
-        img{
-            width: 100%;
-            height : 100%;
-            object-fit: cover;
-        }
-    }
 }
