@@ -1,0 +1,127 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+header{
+    position:relative;
+    .desktop-nav{
+        position:absolute;
+        top :0;
+        z-index:10;
+        padding-top : $y-gap-s;
+        padding-bottom: $y-gap-s;
+        nav{
+            @include flex(row,space-between, center);
+            width : 90%;
+            flex-wrap: wrap;
+            gap:$x-gap-m;
+        }
+        .navbar{
+            @include flex(row,space-between, center);
+            gap:$x-gap-m;
+        }
+        .primary-nav{
+            @include flex(row,start, center);
+            gap:$x-gap-l;
+            flex : 1 1 calc(75% - $x-gap-l);
+        }
+        .contact-nav{
+            margin:$y-gap-s 0 $y-gap-s 0;
+            flex : 1 1 calc(25% - $x-gap-l);
+        }
+        a{
+            text-decoration: none;
+            @include text($primary-color,$primary-font,1.25rem,left,uppercase);
+            margin:calc($y-gap-s / 3) 0;
+        }
+        li{
+            list-style: none;
+        }
+        .in-page{
+            border-bottom : 2px solid $primary-color;
+        }
+        .pill{
+            width : 20rem;
+        }
+    }
+
+    .logo{
+        a{
+            text-decoration: none;
+            @include text($primary-color,$primary-font,1.25rem,left,capitalize);
+        }
+    }
+    .mobile-nav{
+        position:absolute;
+        top :0;
+        z-index:10;
+        padding-top : 4rem;
+        padding-bottom: $y-gap-s;
+        .burger-nav{
+            img{
+                width : 3rem;
+            }
+        }
+        nav{
+            @include flex(row,space-between, start);
+            width : 95%;
+        }
+        .navbar{
+            @include flex(column,space-between, start);
+            background-color: $background-transparent;
+            position:absolute;
+            top :3.5rem;
+            left :5rem;
+            z-index:20;
+        }
+        .contact-nav{
+            @include flex(row,space-between, center);
+            gap:$x-gap-s;
+            flex-wrap : nowrap;
+        }
+        .primary-nav{
+            @include flex(column,start, start);
+        }
+        a{
+            text-decoration: none;
+            color:$primary-color;
+            @include text($primary-color,$primary-font,$text-size:1.25rem);
+            margin:calc($y-gap-s / 3) 0;
+        }
+        li{
+            list-style: none;
+            width : 100%;
+            padding : calc($y-gap-s / 4);
+        }
+        .in-page{
+            width : 100%;
+            background-color: $secondary-color;
+        }
+    }
+}
+
+.pill{
+    background-color: $background-transparent;
+    border-radius: 3rem;
+    height : 3rem;
+    @include flex(row, space-evenly, center);
+    gap:$x-gap-s;
+    padding:0 $x-gap-s 0 $x-gap-s;
+    margin:auto;
+}
+.green-light{
+    width:1.5rem;
+    height:1.5rem;
+    border-radius : 1.5rem;
+    border:0.6rem solid #2AA34D;
+}
+/**
+**************** Mobile **************************
+**/
+//@media (max-width: 1090px){}

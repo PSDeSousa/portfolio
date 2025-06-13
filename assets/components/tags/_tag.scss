@@ -1,0 +1,29 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/colors' as *;
+@use '../../abstracts/typography' as *;
+
+.tag-front{
+    @include button($radius:1rem,$bg-color:$primary-tag-color,$color:$secondary-color,$margin:0.5rem,$case:uppercase);
+    padding:0.2rem 0.5rem;
+    margin : auto;
+    font-size : 0.75rem;
+    text-transform: uppercase;
+}
+.tag-back{
+    @include button($radius:1rem,$bg-color:$secondary-tag-color,$color:$primary-color,$margin:0.5rem,$case:uppercase);
+    padding:0.2rem 0.5rem;
+    margin : auto;
+    font-size : 0.75rem;
+    text-transform: uppercase;
+}
+.tag-block{
+    position:absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    z-index:100;
+    padding:1.2rem;
+    background-color : $background-transparent-dark;
+    backdrop-filter: blur(2px);
+    border-radius : 1rem;
+}

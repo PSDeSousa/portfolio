@@ -1,0 +1,369 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/colors' as *;
+@use '../../abstracts/typography' as *;
+//large card
+.double-card{
+    width:100%;
+    height : 20rem;
+    @include flex(row, space-between, center);
+    margin:auto;
+    margin-top:$y-gap-m;
+    margin-bottom:$y-gap-m;
+    gap : $x-gap-s;
+    position : relative;
+    background-color : $background-color;
+    h4{
+        position : absolute;
+        left : 0;
+        top :10%;
+        z-index:20;
+    }
+    .cell{
+        position : absolute;
+        left : calc(-10% - $x-gap-s);
+        top :0;
+        z-index:10;
+        width : calc(50% + $x-gap-s);
+        height : 100%;
+        img{
+            width : 100%;
+            height : 100%;
+            object-fit: cover;
+        }
+    }
+    .column{
+        @include flex(column, center, center);
+        height : 100%;
+        .content-card{
+            background-color : $primary-card-color;
+            width : 100%;
+            height : 100%;
+            color : $primary-color;
+            padding:$x-gap-s;
+        }
+        .mid-card{
+            height : 80%;
+            background-color : $primary-color;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            h5{
+                color:$secondary-color;
+            }
+            p{
+                color : $secondary-color;
+            }
+            z-index:30;
+        }
+        flex : 1.1 1 calc(33.33% - $x-gap-s);
+    }
+}
+
+.reverse-double-card{
+    width:100%;
+    height : 20rem;
+    @include flex(row-reverse, space-between, center);
+    margin:auto;
+    margin-top:$y-gap-m;
+    margin-bottom:$y-gap-m;
+    gap : $x-gap-s;
+    position : relative;
+    background-color : $background-color;
+    h4{
+        position : absolute;
+        left : 0;
+        top :10%;
+        z-index:20;
+    }
+    .cell{
+        position : absolute;
+        right : calc(-10% - $x-gap-s);
+        top :0;
+        z-index:10;
+        width : calc(50% + $x-gap-s);
+        height : 100%;
+        img{
+            width : 100%;
+            height : 100%;
+            object-fit: cover;
+        }
+    }
+    .column{
+        @include flex(column, center, center);
+        height : 100%;
+        .content-card{
+            background-color : $primary-color;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            h5{
+                color:$secondary-color;
+            }
+            p{
+                color : $secondary-color;
+            }
+            width : 100%;
+            height : 100%;
+            padding:$x-gap-s;
+        }
+        .mid-card{
+            width : 100%;
+            height : 80%;
+            background-color : $secondary-card-color;
+            h5{
+                color:$primary-color;
+            }
+            p{
+                color : $primary-color;
+            }
+            z-index:30;
+        }
+        flex : 1.1 1 calc(33.33% - $x-gap-s);
+    }
+}
+.simple-card{
+    width:100%;
+    height : 20rem;
+    @include flex(row, space-between, center);
+    margin:auto;
+    margin-top:$y-gap-m;
+    margin-bottom:$y-gap-m;
+    gap : $x-gap-s;
+    position : relative;
+    background-color : $background-color;
+    h4{
+        position : absolute;
+        left : 0;
+        top :10%;
+        z-index:20;
+    }
+    .cell{
+        position : absolute;
+        left : 0;
+        top :0;
+        z-index:10;
+        width : calc(40% + $x-gap-s);
+        height : 100%;
+        img{
+            width : 100%;
+            height : 100%;
+            object-fit: cover;
+        }
+    }
+    .column{
+        @include flex(column, center, center);
+        height : 100%;
+        .content-card{
+            padding:$x-gap-s;
+            height : 80%;
+            width : 100%;
+            background-color : $primary-color;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            h5{
+                color:$secondary-color;
+            }
+            p{
+                color : $secondary-color;
+            }
+            z-index:30;
+        }
+        flex : 1.1 1 calc(33.33% - $x-gap-s);
+    }
+    .column:last-child{
+        flex : 1.1 1 calc(66.66% - $x-gap-s);
+    }
+}
+.card-row{
+    width:100%;
+    @include flex(row,space-between,center);
+}
+.stamp-logo{
+    img{
+        height:3rem;
+    }
+}
+.text-logo{
+    img{
+        height:2rem;
+    }
+}
+
+
+
+
+/**
+**************** Mobile **************************
+**/
+@media (max-width: 769px){
+    .double-card, .reverse-double-card, .simple-card{
+        width:100%;
+        height : 100%;
+        @include flex(column, space-between, center);
+        margin:auto;
+        margin-top:20rem;
+        margin-bottom:$y-gap-m;
+        gap : $y-gap-s;
+        position : relative;
+        background-color : $background-color;
+        h4{
+            position : absolute;
+            left : 0;
+            top :10%;
+            z-index:20;
+        }
+        .cell{
+            position : absolute;
+            left : 0;
+            top : -14rem;
+            z-index:10;
+            width : 100%;
+            height : 20rem;
+            img{
+                width : 100%;
+                height : 100%;
+                object-fit: cover;
+            }
+        }
+        .column{
+            @include flex(column, center, center);
+            width : 100%;
+            .content-card{
+                background-color : $primary-card-color;
+                width : 90%;
+                color : $primary-color;
+                padding:$x-gap-s;
+            }
+            .mid-card{
+                width : 80%;
+                background-color : $primary-color;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+                h5{
+                    color:$secondary-color;
+                }
+                p{
+                    color : $secondary-color;
+                }
+                z-index:30;
+            }
+        }
+    }
+
+    .reverse-double-card{
+        width:100%;
+        height : 100%;
+        @include flex(column, space-between, center);
+        margin:auto;
+        margin-top:20rem;
+        margin-bottom:$y-gap-m;
+        gap : $x-gap-s;
+        position : relative;
+        background-color : $background-color;
+        h4{
+            position : absolute;
+            left : 0;
+            top :10%;
+            z-index:20;
+        }
+        .cell{
+            position : absolute;
+            left : 0;
+            top : -14rem;
+            z-index:10;
+            width : 100%;
+            height : 20rem;
+            img{
+                width : 100%;
+                height : 100%;
+                object-fit: cover;
+            }
+        }
+        .column{
+            @include flex(column, center, center);
+            width : 90%;
+            .content-card{
+                background-color : $primary-color;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+                h5{
+                    color:$secondary-color;
+                }
+                p{
+                    color : $secondary-color;
+                }
+                width : 100%;
+                height : 100%;
+                padding:$x-gap-s;
+            }
+            .mid-card{
+                width : 80%;
+                height : 100%;
+                background-color : $secondary-card-color;
+                h5{
+                    color:$primary-color;
+                }
+                p{
+                    color : $primary-color;
+                }
+                z-index:30;
+            }
+            //flex : 1.1 1 calc(33.33% - $x-gap-s);
+        }
+    }
+    .simple-card{
+        width:100%;
+        height : 100%;
+        @include flex(column, space-between, center);
+        margin:auto;
+        margin-top:20rem;
+        margin-bottom:$y-gap-m;
+        gap : $x-gap-s;
+        position : relative;
+        background-color : $background-color;
+        h4{
+            position : absolute;
+            left : 0;
+            top :10%;
+            z-index:20;
+        }
+        .cell{
+            position : absolute;
+            left : 0;
+            top :-14rem;
+            z-index:10;
+            width : 100%;
+            height : 20rem;
+            img{
+                width : 100%;
+                height : 100%;
+                object-fit: cover;
+            }
+        }
+        .column{
+            @include flex(column, center, center);
+            width : 100%;
+            .content-card{
+                padding:$x-gap-s;
+                width : 80%;
+                background-color : $primary-color;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+                h5{
+                    color:$secondary-color;
+                }
+                p{
+                    color : $secondary-color;
+                }
+                z-index:30;
+            }
+        }
+    }
+}
+
+.project-card{
+    position : relative;
+    width : 30rem;
+    height : 22rem;
+    //overflow: hidden;
+    margin-left: calc($x-gap-s / 2);
+    margin-right: calc($x-gap-s / 2);
+    img{
+        width: 100%;
+        height : 100%;
+        object-fit: cover;
+    }
+}

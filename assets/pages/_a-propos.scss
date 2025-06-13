@@ -1,0 +1,204 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+
+.presentation{
+    .container-fluid{
+        background-color:$secondary-color;
+        article{
+            @include flex(row, space-between, center);
+            gap:$x-gap-l;
+            flex-wrap: wrap;
+            .cell{
+                //margin:auto;
+                img{
+                    width : 20rem;
+                }
+            }
+            .i-10{
+                //margin:auto;
+                img{
+                    width : 10rem;
+                }
+            }
+            .content{
+                flex: 1 1 calc(60% - $x-gap-l);
+                h3{
+                margin : 0 0 $y-gap-s 0;
+                }
+            }
+        }
+    }
+}
+.top-presentation{
+    padding-top:15rem;
+}
+.univers{
+    background-color:$background-color;
+    .container{
+        margin:auto;
+        h3, h4{
+            color:$secondary-color;
+        }
+    }
+}
+.missions, .education{
+    background-color:$background-color;
+    .container{
+        article{
+            @include flex(row, space-between, stretch);
+            gap:$x-gap-m;
+            margin-top : $y-gap-m ;
+            .col-2-12{
+                @include flex(column,space-between, start);
+                border-right: 4px $terciary-color solid;
+                width : calc(16.667% - $x-gap-m);
+                .line{
+                    @include flex(row, space-between, stretch);
+                    margin : auto;
+                }
+            }
+        }
+        .content{
+            width: 100%;
+            @include flex(row, space-between, stretch);
+            gap : $x-gap-m;
+            .context{
+                width : 100%;
+                background-color : $primary-card-color;
+                padding:$x-gap-s;
+                p{
+                    color : $primary-color;
+                }
+            }
+            .column{
+            @include flex(column,space-between, start);
+            flex : 1 1 calc(50% - $x-gap-m);
+            background-color : $primary-color;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding:$x-gap-s;
+            }
+            .detail{
+                width : 100%;
+                margin-top : $y-gap-s;
+                ul{
+                    @include flex(row, space-between, start);
+                    width : 100%;
+                    flex : 1 1 calc(50% - $x-gap-s);
+                    gap:$x-gap-s;
+                }
+                li{
+                    @include flex(row, space-between, start);
+                    gap:$x-gap-s;
+                }
+            }
+        }
+        margin:auto;
+        h3, h4, h5, p{
+            color:$secondary-color;
+        }
+        .logo{
+            margin:$y-gap-s;
+            img{
+                width : 4rem;
+            }
+        }
+    }
+}
+
+.skills{
+    .container{
+        margin:auto;
+    }
+    background-color: $background-color;
+    .cell{
+        width: 5rem;
+        @include flex(row,center,center);
+    }
+    img{
+        height: 2rem;
+    }
+
+    ul{
+        li{
+            list-style: none;
+            @include flex(row,start,center);
+            gap : calc($x-gap-s / 2);
+        }
+    }
+    h3, h4, p{
+        color:$secondary-color;
+    }
+    .grid-row{
+        width : 100%;
+        @include flex(row,space-between,start);
+        gap:$x-gap-m;
+        .column{
+            @include flex(column,space-between,start);
+            flex:1 1 calc(33.33% - $x-gap-m);
+            flex-wrap: wrap;
+        }
+    }
+
+}
+
+
+
+
+/**
+**************** Mobile **************************
+
+@media (max-width: 769px){
+}
+**/
+
+/**
+**************** Mobile **************************
+**/
+@media (max-width: 769px){
+    .missions, .education{
+        .container{
+            width:80%; 
+            article{
+                @include flex(column, space-between, start);
+                .cell{
+                    margin:auto;
+                }
+            }
+        }
+    }
+    .missions, .education{
+        .container{
+            article{
+                .col-2-12{
+                    @include flex(row,space-between, center);
+                    border-right: 0;
+                    border-bottom: 4px $terciary-color solid;
+                    width : 100%;
+                    .line{
+                        @include flex(column, space-between, stretch);
+                        margin : auto;
+                    }
+                }
+                .col-10-12{
+                    width:100%;
+                }
+            }
+            .content{
+                width: 100%;
+                @include flex(column, space-between, start);
+                gap : $y-gap-m;
+            }
+        }
+    }
+    .skills{
+        .grid-row{
+            width : 100%;
+            @include flex(column,space-between,start);
+            gap:$y-gap-m;
+        }
+
+}
+}

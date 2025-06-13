@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chef de projet IT Supply Chain</title>
+        <link href="../assets/css/styles.css" rel="stylesheet">
+        <link href="../assets/css/main.css" rel="stylesheet">
+        <!---link rel="icon" type="image/png" href="../favicone.png"--->
+    </head>
+    <body>
+        <header>
+            <!------------------------------- Nav Desktop ------------------------------------------------------->
+            <div class="container-fluid desktop-nav desktop line">
+                <nav>
+                    <!------------------------------- Logo et nav ------------------------------------------------------->
+                    <div class="primary-nav">
+                        <div class="logo">
+                            <a href="../index.html" title="Page d'accueil">Paul De Sousa</a>
+                        </div>
+                        <ul class="navbar">
+                            <li>
+                                <a href="../index.html" title="Page d'accueil">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="a-propos.html" title="A propos de moi">A propos</a>
+                            </li>
+                            <li>
+                                <a href="projets.html" title="Mes projets">Mes projets</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/PSDeSousa" title="consulter ma page Github">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!------------------------------- contact et statut ------------------------------------------------------->
+                    <div class="contact-nav">
+                        <!------------------------------- Cartouche contact ------------------------------------------------------->
+                        <div class="pill">
+                            <div class="green-light"></div>
+                            <p>Open to work</p>
+                            <a href="contacts.html" title="contactez-moi" class="primary-button">Contacts</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!------------------------------- Nav Mobile (masqué en Desktop) ------------------------------------------------------->
+            <div class="container-fluid mobile-nav mobile">
+                <nav>
+                    <div class="primary-nav">
+                        <div id="burgerMenu" class="burger-nav">
+                            <a href="#" title="accéder au menu">
+                                <img src="../assets/images/icone/burger-nav.png" alt="menu">
+                            </a>
+                        </div>
+                        <!--------------------Affichage quand le burger est cliqué----------------->
+                        <div id="closeMenu" class="burger-nav d-no">
+                            <a href="#" title="fermer le menu">
+                                <img src="../assets/images/icone/close.png" alt="fermer le menu">
+                            </a>
+                        </div>
+                        <!------------------------------- Nav mobile à afficher sur clic burger ------------------------------------------------------->
+                        <div id="mobileNav" class="d-no">
+                            <ul class="navbar">
+                                <li>
+                                    <a href="../index.html" title="Page d'accueil" class="in-page">Accueil</a>
+                                </li>
+                                <li>
+                                    <a href="a-propos.html" title="A propos de moi">A propos</a>
+                                </li>
+                                <li>
+                                    <a href="projets.html" title="Mes projets">Mes projets</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/PSDeSousa" title="consulter ma page Github">Github</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!------------------------------- contact et statut ------------------------------------------------------->
+                    <div class="contact-nav">
+                        <!------------------------------- Cartouche contact ------------------------------------------------------->
+                        <div class="pill">
+                            <div class="green-light">
+                            </div>
+                            <a href="contacts.html" title="contactez-moi" class="primary-button">
+                                <img src="../assets/images/icone/mail.png" alt="contacts">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="logo">
+                    <a href="../index.html" title="Page d'accueil">Paul De Sousa</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!------------------------------------------ Section banner --------------------------------------------------------------->
+            <section class="hero-banner">
+                <div class="container-fluid">
+                    <img src="../assets/images/banner/pilat.jpg" alt="Pilat" class="">
+                    <div class="title">
+                        <h1>Contacts</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="location">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <article>
+                                <h3 class="mobile">Situation</h3>
+                                <div class="content">
+                                    <h3 class="desktop">Situation</h3>
+                                    <div>
+                                        <p>Situé au pied du Massif du Pilat, je suis mobile de la plaine du Forez au bassin lyonnais.</p>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <img src="../assets/images/illustration/carte-pilat-2.png" alt="Carte routière entre Lyon et Saint Etienne">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="container">
+                    <div class="row">
+                        <!--------------------------Formulaire de contact---------------------------------------------->
+                        <form action="https://formspree.io/f/mdkzgdqz" method="post" id="form" class="form-contact">
+                            <h3>Me contacter</h3>
+                            <div id="idClient" class="form-block">
+                                <div class="form-row">
+                                    <div class="form-column">
+                                        <label>Prénom et Nom</label>
+                                        <input type="text" id="fullname">
+                                        <div id="fullnameError" class="error"></div>
+                                    </div>
+                                    <div class="form-column">
+                                        <label>Société</label>
+                                        <input type="text" id="society" >
+                                        <div id="societyError" class="error"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-column">
+                                        <label>Email</label>
+                                        <input type="text" id="email" name="email">
+                                        <div id="emailError" class="error"></div>
+                                    </div>
+                                    <div class="form-column">
+                                        <label>Téléphone</label>
+                                        <input type="text" id="phone">
+                                        <div id="phoneError" class="error"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-column">
+                                        <label>Message</label>
+                                        <textarea type="text" id="messageDetail" class="message-input"></textarea>
+                                        <div id="messageError" class="error"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="hidden" id="message-hidden" name="message">
+                                <button type="submit" class="secondary-button">
+                                    <p>Envoyer</p>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h5 class="logo">
+                            <a href="../index.html" title="Page d'accueil">Paul De Sousa</a>
+                        </h5>
+                            <p>Chef de projet fonctionnel industrie et distribution.</p>
+                            <p class="desktop">Spécialiste des métiers de la Logistique et Supply-Chain.</p>
+                            <p>Developpeur web fullstack.</p>
+                    </div>
+                    <div class="column">
+                        <h5>Contactez-moi</h5>
+                         <!------------------------------- Liste contact ------------------------------------------------------->
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/paul-de-sousa-85556a92/" target="_blank" title="Contactez moi sur Linkedin">Linkedin</a>
+                            </li>
+                            <li>
+                                <a href="contacts.html" title="contactez-moi" title="Envoyer moi un e-mail">E-mail</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h5>Mentions</h5>
+                        <ul>
+                            <li>
+                                <a href="mentions.html" title="Lire les mentions légales">Mentions légales</a>
+                            </li>
+                            <li>
+                                <a href="mentions.html" title="Lire les clauses de confidentialité">Confidentialité</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>        
+        <script src="../javascript/script.js"></script>
+        <script src="../javascript/contact.js"></script>
+    </body>
+</html>

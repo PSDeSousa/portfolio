@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/typography' as *;
+
+.container-fluid{
+    width : 100%;
+    //min-height : 100vh;
+    @include flex(column, center, center);
+}
+.hero{
+    //background-image: url("../images/background/b-0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    width : 80%;
+    //max-width: 86rem;
+    @include flex(column, center, center);
+
+}
+.row{
+    width : 100%;
+    margin-top : $y-gap-l;
+    margin-bottom : $y-gap-l;
+}
+.grid-row{
+    width : 100%;
+    @include flex(row, space-between, center);
+    margin-top : $y-gap-s;
+    margin-bottom : $y-gap-s;
+}
+.column, .col-2-12, .col-10-12{
+    @include flex(column, space-between, center);
+    //gap : $y-gap-l;
+}
+.col-2-12{
+    width: 16.667%;
+}
+.col-10-12{
+    width: 83.333%;
+}
+a{
+    text-decoration: none;
+}
+/**
+**************** Mobile **************************
+**/
+@media (max-width: 1090px){
+    .container{
+        width : 80%;
+        @include flex(column, center, center);
+    }
+}

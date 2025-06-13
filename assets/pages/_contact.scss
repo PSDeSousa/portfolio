@@ -1,0 +1,154 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+
+
+
+
+
+//Mise en forme de la section situation géographique
+.location{
+    .container-fluid{
+        background-color:$terciary-color;
+        article{
+            @include flex(row, space-between, center);
+            gap:$x-gap-l;
+            flex-wrap: wrap;
+            img{
+                width : 40rem;
+            }
+            .cell{
+                //margin:auto;
+            }
+            .content{
+                flex: 1 1 calc(40% - $x-gap-l);
+                h3{
+                margin : 0 0 $y-gap-s 0;
+                }
+            }
+        }
+    }
+}
+
+//Mise en forme du formulaire de contact
+.contact{
+    background-color:$background-color;
+    .container{
+        margin:auto;
+        width:60%;
+        padding-top : $y-gap-l;
+        .row{
+            @include flex(row, center, center);
+            .form-contact{
+                width : 100%;
+                input, select, textarea{
+                    background-color: $input-color;
+                    height:3.5rem;
+                    padding : $x-gap-s;
+                    //border-radius : 8px;
+                    border : none;
+                }
+                textarea{
+                    height:14rem;
+                }
+                h3{
+                    color:$secondary-color;
+                    margin-top:$y-gap-s;
+                    margin-bottom:$y-gap-s;
+                }
+                label{
+                    @include text();
+                    color:$secondary-color;
+                    margin-top:$y-gap-m;
+                    margin-bottom:$y-gap-s;
+                }
+                .form-block{
+                    width : 100%;
+                    @include flex(column,start,start);
+                    margin-bottom:$y-gap-m;
+                    >input{
+                        width : 100%;
+                    }
+                    >textarea{
+                        width : 100%;
+                    }
+                }
+                .form-row{
+                    width : 100%;
+                    //margin-top: $y-gap-s;
+                    @include flex(row,space-between,center);
+                    gap:$x-gap-s;
+                    .form-column{
+                        flex : 1 1 calc(50% - $y-gap-s);
+                        @include flex(column,start,start);
+                        //gap:$y-gap-s;
+                        >select{
+                            width : 100%;
+                        }
+                        >input{
+                            width : 100%;
+                        }
+                        >textarea{
+                            width : 100%;
+                        }
+                    }
+                    .form-row{
+                        flex : 1 1 calc(50% - $x-gap-s);
+                    }
+                }
+                .error{
+                    background-color: $alert-color;
+                    //border-radius : 2px;
+                }
+                .secondary-button{
+                    @include button($primary-color,$terciary-color, 0rem, none);
+                    width:calc(50% - $x-gap-s);
+                    height:3.5rem;
+                    margin:auto;
+                }
+            }
+        }
+    } 
+}
+
+/**
+**************** Mobile **************************
+**/
+@media (max-width: 769px){
+    .location{
+        .container{
+            width:80%; 
+            article{
+                @include flex(column, space-between, start);
+                .cell{
+                    margin:auto;
+                    img{
+                        width : 20rem;
+                    }
+                }
+            }
+        }
+    }
+    .contact{
+        .container{
+            width:80%;
+            .row{
+                @include flex(row, center, center);
+                .form-contact{
+                    .form-row{
+                        width : 100%;
+                        //margin-top: $y-gap-s;
+                        @include flex(column,space-between,center);
+                        gap:$x-gap-s;
+                        .form-column{
+                            width : 100%;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+

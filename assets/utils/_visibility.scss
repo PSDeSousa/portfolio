@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+.d-no{
+    display:none;
+}
+.d-yes{
+    display:block;
+}
+/**
+**************** Mobile **************************
+**/
+@media (max-width: 769px){
+    .desktop
+    {
+        display:none;
+    }
+}
+
+/**
+**************** Desktop **************************
+**/
+@media (min-width: 769px){
+    .mobile
+    {
+        display:none;
+        margin:0;
+        padding:0;
+        
+    }
+}

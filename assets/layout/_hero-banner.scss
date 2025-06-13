@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+.hero-banner{
+    .container-fluid{
+        position:relative;
+        overflow: hidden;
+        height:100vh;
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            object-position: center ;
+    
+        }
+        .title{
+            position : absolute;
+            top : 33%;
+            @include flex(column, center, center);
+        }
+    }
+    
+}
+.hero-banner-top{
+    .container-fluid{
+        position:relative;
+        overflow: hidden;
+        height:70vh;
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            object-position: top;
+    
+        }
+        .title{
+            position : absolute;
+            top : 33%;
+            @include flex(column, center, center);
+        }
+    }
+    .blurry{
+        position : absolute;
+        bottom:0;
+        z-index: 50;
+        width:100%;
+        height:20%;
+        background: linear-gradient(to bottom, #00000000, $primary-card-color);
+    }
+}
+
+
+/**
+**************** Mobile **************************
+
+@media (max-width: 769px){
+}
+**/

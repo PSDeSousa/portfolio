@@ -1,0 +1,37 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/colors' as *;
+@use '../../abstracts/typography' as *;
+
+.forward-btn{
+    transform : rotate(180deg) translatey(+18%);
+}
+.carousel-container{
+        @include flex(row,space-between,center);
+        flex-wrap: nowrap;
+        gap : $x-gap-s;
+        width: 100%;
+}
+.carousel{
+    overflow: hidden; //pour masquer les cards qui dépassent
+    .carousel-row{
+        @include flex(row,start,center);
+        flex-wrap: nowrap;
+        //gap : $x-gap-m;
+        width: max-content; //pour empêcher le débordement
+    }
+}
+
+
+
+/**
+**************** Mobile **************************
+**/
+@media (max-width: 1090px) {
+
+.forward-btn, .back-btn{
+    img{
+        width : 2rem;
+    }
+}
+}

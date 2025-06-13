@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/typography' as *;
+// Titre et paragraphes
+h1{
+    @include text($primary-color,$secondary-font,3rem,center,uppercase);
+}
+h2{
+    @include text($primary-color,$secondary-font,2rem,center,none);
+}
+h3{
+    @include text($primary-color,$terciary-font,2rem);
+}
+h4{
+    @include text($primary-color,$terciary-font,1.8rem);
+}
+h5{
+    @include text($primary-color,$terciary-font,1.2rem);
+}
+.heavy{
+    @include text($primary-color,$secondary-font,1rem);
+    margin:calc($y-gap-s * (2/3)) 0;
+}
+p{
+    @include text;
+    margin:0.5rem 0;
+    margin:calc($y-gap-s / 3) 0;
+}
+.sign{
+    margin-top: $x-gap-s;
+    text-align: right;
+}
+
+/**
+**************** Mobile **************************
+**/
+//@media (max-width: 1090px) {}
