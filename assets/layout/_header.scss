@@ -65,7 +65,7 @@ header{
         padding-bottom: $y-gap-s;
         .burger-nav{
             img{
-                width : 3rem;
+                width : 2.8rem;
             }
         }
         nav{
@@ -79,6 +79,7 @@ header{
             top :3.5rem;
             left :5rem;
             z-index:20;
+            backdrop-filter: blur(5px);
         }
         .contact-nav{
             @include flex(row,space-between, center);

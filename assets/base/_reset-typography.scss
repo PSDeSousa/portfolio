@@ -59,24 +59,24 @@ h4{
     @include text($primary-color,$terciary-font,1.5rem);
 }
 h5{
-    @include text($primary-color,$terciary-font,1rem);
+    @include text($primary-color,$terciary-font,1.2rem);
 }
 .heavy{
-    @include text($primary-color,$secondary-font,0.7rem);
+    @include text($primary-color,$secondary-font,1rem);
     margin:calc($y-gap-s * (2/3)) 0;
 }
 p{
     @include text;
     margin:0.5rem 0;
     margin:calc($y-gap-s / 3) 0;
-    font-size:0.7rem;
+    font-size:1rem;
 }
 
 .anotation{
-    @include text($text-color,$primary-font,0.5rem);
+    @include text($text-color,$primary-font,0.8rem);
     font-style: italic;
     a{
-        @include text($text-color,$secondary-font,0.5rem);
+        @include text($text-color,$secondary-font,0.8rem);
     }
 }
     

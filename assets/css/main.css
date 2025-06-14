@@ -136,7 +136,7 @@ p {
   h5 {
     color: #FFFFFF;
     font-family: "Inter Medium", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 1.5rem 0;
     text-align: left;
     text-transform: none;
@@ -144,7 +144,7 @@ p {
   .heavy {
     color: #FFFFFF;
     font-family: "Inter Bold", sans-serif;
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin: 1.5rem 0;
     text-align: left;
     text-transform: none;
@@ -159,12 +159,12 @@ p {
     text-transform: none;
     margin: 0.5rem 0;
     margin: 0.5rem 0;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .anotation {
     color: #343553;
     font-family: "Inter Regular", sans-serif;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     margin: 1.5rem 0;
     text-align: left;
     text-transform: none;
@@ -173,7 +173,7 @@ p {
   .anotation a {
     color: #343553;
     font-family: "Inter Bold", sans-serif;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     margin: 1.5rem 0;
     text-align: left;
     text-transform: none;
@@ -329,7 +329,7 @@ header .mobile-nav {
   padding-bottom: 1.5rem;
 }
 header .mobile-nav .burger-nav img {
-  width: 3rem;
+  width: 2.8rem;
 }
 header .mobile-nav nav {
   display: flex;
@@ -350,6 +350,7 @@ header .mobile-nav .navbar {
   top: 3.5rem;
   left: 5rem;
   z-index: 20;
+  backdrop-filter: blur(5px);
 }
 header .mobile-nav .contact-nav {
   display: flex;
@@ -506,6 +507,15 @@ footer .row .column:first-child {
   footer .row .column P {
     width: 100%;
     margin: 0.5rem 0;
+  }
+  footer .row .column ul li a {
+    color: #FFFFFF;
+    font-family: "Inter Regular", sans-serif;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    text-transform: none;
+    margin: 0;
   }
 }
 .hero-banner .container-fluid {
@@ -816,6 +826,19 @@ footer .row .column:first-child {
   height: 2rem;
 }
 
+.project-card {
+  position: relative;
+  width: 43rem;
+  height: 30rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /**
 **************** Mobile **************************
 **/
@@ -1002,20 +1025,19 @@ footer .row .column:first-child {
   .simple-card .column .content-card p {
     color: #000000;
   }
+  .project-card {
+    position: relative;
+    width: 78vw;
+    height: 50vh;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
-.project-card {
-  position: relative;
-  width: 30rem;
-  height: 22rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-.project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .tag-front {
   border-radius: 1rem;
   font-family: "Inter Bold", sans-serif;
@@ -1104,6 +1126,16 @@ footer .row .column:first-child {
   .forward-btn img, .back-btn img {
     width: 2rem;
   }
+  .carousel-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    width: 100%;
+  }
 }
 .accordion-btn, .accordion-btn2, .accordion-btn3 {
   background-color: #173630;
@@ -1136,6 +1168,9 @@ footer .row .column:first-child {
   margin: auto;
 }
 
+/**
+**************** Mobile **************************
+**/
 .presentation .container-fluid {
   background-color: #000000;
 }
@@ -1347,6 +1382,7 @@ footer .row .column:first-child {
     border-right: 0;
     border-bottom: 4px #173630 solid;
     width: 100%;
+    flex-wrap: wrap;
   }
   .missions .container article .col-2-12 .line, .education .container article .col-2-12 .line {
     display: flex;
@@ -1355,6 +1391,12 @@ footer .row .column:first-child {
     align-items: stretch;
     flex-wrap: wrap;
     margin: auto;
+  }
+  .missions .container article .col-2-12 .logo, .education .container article .col-2-12 .logo {
+    flex: 2 1 100%;
+  }
+  .missions .container article .col-2-12 h5, .education .container article .col-2-12 h5 {
+    flex: 1 1 50%;
   }
   .missions .container article .col-10-12, .education .container article .col-10-12 {
     width: 100%;
@@ -1390,7 +1432,7 @@ footer .row .column:first-child {
     flex-wrap: wrap;
   }
   .presentation .container-fluid article .cell img {
-    width: 10rem;
+    width: 20rem;
   }
 }
 .projets {

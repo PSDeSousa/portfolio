@@ -69,6 +69,14 @@ footer{
                     width : 100%;
                     margin:0.5rem 0;
                 }
+                ul{
+                    li{
+                        a{
+                            @include text($primary-color,$primary-font,1rem);
+                            margin:0;
+                        }
+                    }
+                }
             }
         }
     }

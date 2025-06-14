@@ -177,9 +177,16 @@
                     border-right: 0;
                     border-bottom: 4px $terciary-color solid;
                     width : 100%;
+                    flex-wrap:wrap;
                     .line{
                         @include flex(column, space-between, stretch);
                         margin : auto;
+                    }
+                    .logo{
+                        flex:2 1 100%;
+                    }
+                    h5{
+                        flex : 1 1 50%;
                     }
                 }
                 .col-10-12{
@@ -212,7 +219,7 @@
             .cell{
                 //margin:auto;
                 img{
-                    width : 10rem;
+                    width : 20rem;
                 }
             }
         }
