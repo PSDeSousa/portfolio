@@ -197,6 +197,11 @@
         height : 100%;
         object-fit: cover;
     }
+    video{
+        width : 100%;
+        height : 100%;
+        object-fit: cover;
+    }
 }
 
 
@@ -375,6 +380,11 @@
         margin-right: calc($x-gap-s / 2);
         img{
             width: 100%;
+            height : 100%;
+            object-fit: cover;
+        }
+        video{
+            width : 100%;
             height : 100%;
             object-fit: cover;
         }

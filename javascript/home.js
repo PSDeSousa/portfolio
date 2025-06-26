@@ -33,7 +33,7 @@ projectBack.addEventListener("click", function(){
 
 projectForward.addEventListener("click", function(){
     
-    if(nbScrollProject > -nbProjectCards + 2){
+    if(nbScrollProject > -nbProjectCards + 1){
       nbScrollProject = nbScrollProject - 1;
     }
     //mouvement dynamisé avec GSAP
