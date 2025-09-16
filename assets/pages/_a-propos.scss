@@ -14,7 +14,7 @@
             .cell{
                 //margin:auto;
                 img{
-                    width : 20rem;
+                    width : 30rem;
                 }
             }
             .i-10{
@@ -26,7 +26,7 @@
             .content{
                 flex: 1 1 calc(60% - $x-gap-l);
                 h3{
-                margin : 0 0 $y-gap-s 0;
+                margin : $y-gap-s 0 $y-gap-s 0;
                 }
             }
         }
@@ -109,6 +109,9 @@
 }
 
 .skills{
+    h2{
+        color:$secondary-color;
+    }
     .container{
         margin:auto;
     }

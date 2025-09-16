@@ -1194,7 +1194,7 @@ footer .row .column:first-child {
   flex-wrap: wrap;
 }
 .presentation .container-fluid article .cell img {
-  width: 20rem;
+  width: 30rem;
 }
 .presentation .container-fluid article .i-10 img {
   width: 10rem;
@@ -1203,7 +1203,7 @@ footer .row .column:first-child {
   flex: 1 1 calc(60% - 5rem);
 }
 .presentation .container-fluid article .content h3 {
-  margin: 0 0 1.5rem 0;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 .top-presentation {
@@ -1314,6 +1314,9 @@ footer .row .column:first-child {
 
 .skills {
   background-color: #F9F9F9;
+}
+.skills h2 {
+  color: #000000;
 }
 .skills .container {
   margin: auto;
